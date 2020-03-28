@@ -12,20 +12,18 @@ import problem1.mybst.MyBinarySearchTree;
 // use problem1.mybst.MyBinarySearchTree class for creating binary tree
 public class MyMain {
     public static void main(String[] args) {
-        MyBinarySearchTree tree = new MyBinarySearchTree();
-        tree.insert(45);
-        tree.insert(75);
-        tree.insert(23);
-        tree.insert(34);
-        tree.insert(65);
-        tree.insert(76);
-        tree.insert(89);
+        MyBinarySearchTree m = new MyBinarySearchTree();
+        Functions mthds = new Functions();
+        for (int i = 0; i < 10; i++) {
+            m.insert(m.getRoot());
+        }
 
-        System.out.println("Post Order Traversal");
-        tree.traversePostOrder(tree.getRoot());
 
-        System.out.println();
-        System.out.println("Pre Order Traversal");
-        tree.traversePreOrder(tree.getRoot());
+        mthds.printPostOrder(m.getRoot());
+        mthds.printPreOrder(m.getRoot());
+        System.out.println(mthds.verify_A());
+
+
+        System.out.println(mthds.verify_B());
     }
 }
